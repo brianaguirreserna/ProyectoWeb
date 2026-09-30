@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Usuarios — OndaPlay</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="admin-shell">
+  <aside class="admin-sidebar">
+    <div class="brand">Onda<span class="dot">Play</span></div>
+    <div class="side-label">General</div>
+    <a href="gestion.html" class="side-link"><span class="ic"><i class="bi bi-grid-1x2"></i></span> Dashboard</a>
+    <div class="side-label">Gestión</div>
+    <a href="planes.html" class="side-link"><span class="ic"><i class="bi bi-stack"></i></span> Planes de suscripción</a>
+    <a href="categorias.html" class="side-link"><span class="ic"><i class="bi bi-tags"></i></span> Categorías de contenido</a>
+    <a href="contenido.html" class="side-link"><span class="ic"><i class="bi bi-film"></i></span> Catálogo de contenido</a>
+    <a href="usuarios.html" class="side-link active"><span class="ic"><i class="bi bi-people"></i></span> Usuarios</a>
+    <a href="pagos.html" class="side-link"><span class="ic"><i class="bi bi-credit-card"></i></span> Pagos</a>
+    <a href="cupones.html" class="side-link"><span class="ic"><i class="bi bi-ticket-perforated"></i></span> Cupones y promos</a>
+    <div class="side-label">Analítica</div>
+    <a href="metricas.html" class="side-link"><span class="ic"><i class="bi bi-graph-up-arrow"></i></span> Métricas</a>
+    <div class="side-label">Cuenta</div>
+    <a href="login.html" class="side-link"><span class="ic"><i class="bi bi-box-arrow-right"></i></span> Cerrar sesión</a>
+  </aside>
+
+  <main class="admin-main">
+    <div class="admin-topbar">
+      <div>
+        <button class="btn btn-sm btn-outline-op d-md-none me-2" data-sidebar-toggle><i class="bi bi-list"></i></button>
+        <span class="crumb">Panel administrativo / </span><strong>Usuarios</strong>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <span class="text-dim small d-none d-sm-inline">Hola, Administrador</span>
+        <div class="rounded-circle bg-secondary" style="width:34px;height:34px;"></div>
+      </div>
+    </div>
+
+    <div class="admin-content">
+      <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+        <div>
+          <h1 class="h4 mb-1">Usuarios</h1>
+          <p class="text-dim small mb-0">Cuentas de clientes y administradores registrados en la plataforma.</p>
+        </div>
+        <div class="d-flex gap-2">
+          <input type="search" class="form-control form-control-sm" style="width:220px" placeholder="Buscar usuario...">
+          <button class="btn btn-accent" data-new-record data-target-modal="modalUser" data-bs-toggle="modal" data-bs-target="#modalUser">
+            <i class="bi bi-plus-lg me-1"></i> Nuevo usuario
+          </button>
+        </div>
+      </div>
+
+      <div class="op-card p-3">
+        <div class="table-responsive">
+          <table class="table table-op align-middle mb-0">
+            <thead><tr><th>Nombre</th><th>Correo</th><th>Rol</th><th>Plan</th><th>Estado</th><th class="text-end">Acciones</th></tr></thead>
+            <tbody>
+              <tr data-nombre="Camila Rojas" data-correo="camila.rojas@correo.com" data-rol="Cliente" data-plan="Premium" data-estado="Activo">
+                <td><strong>Camila Rojas</strong></td><td class="text-dim small">camila.rojas@correo.com</td><td>Cliente</td><td>Premium</td>
+                <td><span class="badge-status badge-active">Activo</span></td>
+                <td class="text-end">
+                  <button class="btn btn-sm btn-outline-op" data-edit-row data-target-modal="modalUser" data-bs-toggle="modal" data-bs-target="#modalUser"><i class="bi bi-pencil"></i></button>
+                  <button class="btn btn-sm btn-outline-op" data-delete-row><i class="bi bi-trash"></i></button>
+                </td>
+              </tr>
+              <tr data-nombre="Jorge Huamán" data-correo="jorge.huaman@correo.com" data-rol="Cliente" data-plan="Estándar" data-estado="Activo">
+                <td><strong>Jorge Huamán</strong></td><td class="text-dim small">jorge.huaman@correo.com</td><td>Cliente</td><td>Estándar</td>
+                <td><span class="badge-status badge-active">Activo</span></td>
+                <td class="text-end">
+                  <button class="btn btn-sm btn-outline-op" data-edit-row data-target-modal="modalUser" data-bs-toggle="modal" data-bs-target="#modalUser"><i class="bi bi-pencil"></i></button>
+                  <button class="btn btn-sm btn-outline-op" data-delete-row><i class="bi bi-trash"></i></button>
+                </td>
+              </tr>
+              <tr data-nombre="Ana Torres" data-correo="ana.torres@ondaplay.pe" data-rol="Administrador" data-plan="—" data-estado="Activo">
+                <td><strong>Ana Torres</strong></td><td class="text-dim small">ana.torres@ondaplay.pe</td><td>Administrador</td><td>—</td>
+                <td><span class="badge-status badge-active">Activo</span></td>
+                <td class="text-end">
+                  <button class="btn btn-sm btn-outline-op" data-edit-row data-target-modal="modalUser" data-bs-toggle="modal" data-bs-target="#modalUser"><i class="bi bi-pencil"></i></button>
+                  <button class="btn btn-sm btn-outline-op" data-delete-row><i class="bi bi-trash"></i></button>
+                </td>
+              </tr>
+              <tr data-nombre="Luis Farfán" data-correo="luis.farfan@correo.com" data-rol="Cliente" data-plan="Básico" data-estado="Suspendido">
+                <td><strong>Luis Farfán</strong></td><td class="text-dim small">luis.farfan@correo.com</td><td>Cliente</td><td>Básico</td>
+                <td><span class="badge-status badge-pending">Suspendido</span></td>
+                <td class="text-end">
+                  <button class="btn btn-sm btn-outline-op" data-edit-row data-target-modal="modalUser" data-bs-toggle="modal" data-bs-target="#modalUser"><i class="bi bi-pencil"></i></button>
+                  <button class="btn btn-sm btn-outline-op" data-delete-row><i class="bi bi-trash"></i></button>
+                </td>
+              </tr>
+              <tr data-nombre="Rosa Injante" data-correo="rosa.injante@correo.com" data-rol="Cliente" data-plan="Premium" data-estado="Inactivo">
+                <td><strong>Rosa Injante</strong></td><td class="text-dim small">rosa.injante@correo.com</td><td>Cliente</td><td>Premium</td>
+                <td><span class="badge-status badge-inactive">Inactivo</span></td>
+                <td class="text-end">
+                  <button class="btn btn-sm btn-outline-op" data-edit-row data-target-modal="modalUser" data-bs-toggle="modal" data-bs-target="#modalUser"><i class="bi bi-pencil"></i></button>
+                  <button class="btn btn-sm btn-outline-op" data-delete-row><i class="bi bi-trash"></i></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<!--modal-->
+<div class="modal fade" id="modalUser" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" data-new-label="Nuevo usuario" data-edit-label="Editar usuario">Nuevo usuario</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form onsubmit="return false;">
+          <div class="mb-3">
+            <label class="form-label">Nombre completo</label>
+            <input type="text" class="form-control" data-field="nombre">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" data-field="correo">
+          </div>
+          <div class="row g-3">
+            <div class="col-6">
+              <label class="form-label">Rol</label>
+              <select class="form-select" data-field="rol"><option>Cliente</option><option>Administrador</option></select>
+            </div>
+            <div class="col-6">
+              <label class="form-label">Plan asignado</label>
+              <select class="form-select" data-field="plan"><option>Básico</option><option>Estándar</option><option>Premium</option><option>—</option></select>
+            </div>
+            <div class="col-6">
+              <label class="form-label">Estado</label>
+              <select class="form-select" data-field="estado"><option>Activo</option><option>Suspendido</option><option>Inactivo</option></select>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline-op" data-bs-dismiss="modal">Cancelar</button>
+        <button class="btn btn-accent" data-save-record data-target-modal="modalUser">Guardar usuario</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

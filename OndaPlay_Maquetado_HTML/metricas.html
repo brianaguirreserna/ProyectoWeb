@@ -1,0 +1,128 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Métricas — OndaPlay</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="css/styles.css">
+<style>.chart-box{position:relative;height:230px;}</style>
+</head>
+<body>
+
+<div class="admin-shell">
+  <aside class="admin-sidebar">
+    <div class="brand">Onda<span class="dot">Play</span></div>
+    <div class="side-label">General</div>
+    <a href="gestion.html" class="side-link"><span class="ic"><i class="bi bi-grid-1x2"></i></span> Dashboard</a>
+    <div class="side-label">Gestión</div>
+    <a href="planes.html" class="side-link"><span class="ic"><i class="bi bi-stack"></i></span> Planes de suscripción</a>
+    <a href="categorias.html" class="side-link"><span class="ic"><i class="bi bi-tags"></i></span> Categorías de contenido</a>
+    <a href="contenido.html" class="side-link"><span class="ic"><i class="bi bi-film"></i></span> Catálogo de contenido</a>
+    <a href="usuarios.html" class="side-link"><span class="ic"><i class="bi bi-people"></i></span> Usuarios</a>
+    <a href="pagos.html" class="side-link"><span class="ic"><i class="bi bi-credit-card"></i></span> Pagos</a>
+    <a href="cupones.html" class="side-link"><span class="ic"><i class="bi bi-ticket-perforated"></i></span> Cupones y promos</a>
+    <div class="side-label">Analítica</div>
+    <a href="metricas.html" class="side-link active"><span class="ic"><i class="bi bi-graph-up-arrow"></i></span> Métricas</a>
+    <div class="side-label">Cuenta</div>
+    <a href="login.html" class="side-link"><span class="ic"><i class="bi bi-box-arrow-right"></i></span> Cerrar sesión</a>
+  </aside>
+
+  <main class="admin-main">
+    <div class="admin-topbar">
+      <div>
+        <button class="btn btn-sm btn-outline-op d-md-none me-2" data-sidebar-toggle><i class="bi bi-list"></i></button>
+        <span class="crumb">Panel administrativo / </span><strong>Métricas</strong>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <span class="text-dim small d-none d-sm-inline">Hola, Administrador</span>
+        <div class="rounded-circle bg-secondary" style="width:34px;height:34px;"></div>
+      </div>
+    </div>
+
+    <div class="admin-content">
+      <h1 class="h4 mb-1">Métricas del negocio</h1>
+      <p class="text-dim small">5 indicadores puntuales del día y 5 métricas basadas en series de tiempo (últimos 8 meses).</p>
+
+      <h6 class="text-dim mt-4 mb-2" style="font-size:.78rem; text-transform:uppercase; letter-spacing:.06em;">Indicadores puntuales de hoy</h6>
+      <div class="row g-3 mb-4">
+        <div class="col-6 col-lg">
+          <div class="kpi-card"><div class="kpi-label">Nuevas suscripciones hoy</div><div class="kpi-value">146</div></div>
+        </div>
+        <div class="col-6 col-lg">
+          <div class="kpi-card"><div class="kpi-label">Cancelaciones hoy</div><div class="kpi-value">12</div></div>
+        </div>
+        <div class="col-6 col-lg">
+          <div class="kpi-card"><div class="kpi-label">Ingresos de hoy</div><div class="kpi-value">S/ 6,180</div></div>
+        </div>
+        <div class="col-6 col-lg">
+          <div class="kpi-card"><div class="kpi-label">Pagos fallidos hoy</div><div class="kpi-value">23</div></div>
+        </div>
+        <div class="col-6 col-lg">
+          <div class="kpi-card"><div class="kpi-label">Cupones canjeados hoy</div><div class="kpi-value">58</div></div>
+        </div>
+      </div>
+      <!-- SERIES DE TIEMPO -->>
+      <h6 class="text-dim mt-4 mb-2" style="font-size:.78rem; text-transform:uppercase; letter-spacing:.06em;">Series de tiempo (últimos 8 meses)</h6>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="op-card p-3">
+            <div class="d-flex justify-content-between"><strong class="small">Ingresos mensuales (S/.)</strong></div>
+            <div class="chart-box"><canvas id="chIngresos"></canvas></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="op-card p-3">
+            <div class="d-flex justify-content-between"><strong class="small">Suscriptores activos</strong></div>
+            <div class="chart-box"><canvas id="chSuscriptores"></canvas></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="op-card p-3">
+            <div class="d-flex justify-content-between"><strong class="small">Tasa de cancelación (%)</strong></div>
+            <div class="chart-box"><canvas id="chChurn"></canvas></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="op-card p-3">
+            <div class="d-flex justify-content-between"><strong class="small">Pagos fallidos por mes</strong></div>
+            <div class="chart-box"><canvas id="chFallidos"></canvas></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="op-card p-3">
+            <div class="d-flex justify-content-between"><strong class="small">Cupones canjeados por mes</strong></div>
+            <div class="chart-box"><canvas id="chCupones"></canvas></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+<script src="js/script.js"></script>
+<script>
+  const meses = ['mar-25','abr-25','may-25','jun-25','jul-25','ago-25','sep-25','oct-25'];
+  Chart.defaults.color = '#9AA1B2';
+  Chart.defaults.font.family = "Inter";
+  Chart.defaults.borderColor = '#2A2F3D';
+
+  function lineChart(id, data, color) {
+    new Chart(document.getElementById(id), {
+      type: 'line',
+      data: { labels: meses, datasets: [{ data, borderColor: color, backgroundColor: color + '33', tension: .35, fill: true, pointRadius: 2 }] },
+      options: { plugins: { legend: { display: false } }, scales: { y: { beginAtZero: false } } }
+    });
+  }
+  lineChart('chIngresos', [12500,14300,13200,15600,16200,14800,17100,18300], '#5B6CFF');
+  lineChart('chSuscriptores', [15200,15800,16100,16700,17250,17600,17950,18340], '#2ED9A6');
+  lineChart('chChurn', [3.1,2.9,3.4,2.8,2.5,2.7,2.3,2.2], '#FF5C6C');
+  lineChart('chFallidos', [210,198,240,205,190,175,168,150], '#FFB84C');
+  lineChart('chCupones', [820,910,870,960,1040,1100,1180,1260], '#FF3E7F');
+</script>
+</body>
+</html>

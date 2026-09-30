@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Promociones — OndaPlay</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<!--hamburguesa-->>
+<nav class="navbar navbar-expand-lg op-navbar py-3">
+  <div class="container">
+    <a class="navbar-brand" href="main.html">Onda<span class="dot">Play</span></a>
+    <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+      <i class="bi bi-list fs-2"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navMain">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link" href="main.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link active" href="publicidad.html">Promociones</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link" href="gestion.html">Panel administrativo</a></li>
+      </ul>
+      <a href="login.html" class="btn btn-accent px-4">Iniciar sesión</a>
+    </div>
+  </div>
+</nav>
+<!--carrusel-->
+<div id="promoCarousel" class="carousel slide" data-bs-ride="carousel" style="border-bottom:1px solid var(--line);">
+  <div class="carousel-inner">
+
+    <div class="carousel-item active">
+      <div class="hero py-5" style="border:none;">
+        <div class="container">
+          <span class="badge rounded-pill mb-3" style="background:var(--accent-2);">Por tiempo limitado</span>
+          <h2 class="mb-2">2 meses al 50% en plan Estándar</h2>
+          <p class="text-dim mb-0">Válido para nuevos suscriptores hasta el 31 de octubre.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="carousel-item">
+      <div class="hero py-5" style="border:none;">
+        <div class="container">
+          <span class="badge rounded-pill mb-3" style="background:var(--accent);">Alianza</span>
+          <h2 class="mb-2">Plan Premium + Banco Andino: 20% todo el año</h2>
+          <p class="text-dim mb-0">Paga con tu tarjeta afiliada y obtén el descuento automáticamente.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="hero py-5" style="border:none;">
+        <div class="container">
+          <span class="badge rounded-pill mb-3" style="background:var(--ok); color:#0B0D12;">Referidos</span>
+          <h2 class="mb-2">Invita a un amigo y ambos ganan un mes gratis</h2>
+          <p class="text-dim mb-0">Comparte tu código de referido desde tu panel de cuenta.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#promoCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#promoCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<section class="container py-5">
+  <h3 class="h4 mb-4">Todas las promociones vigentes</h3>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="op-card p-4 h-100">
+        <span class="badge-status badge-active mb-3 d-inline-block">Vigente</span>
+        <h6>Cupón BIENVENIDA20</h6>
+        <p class="text-dim small">20% de descuento el primer mes para nuevas cuentas.</p>
+        <p class="text-faint small mb-0">Vence: 15/11/2026</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="op-card p-4 h-100">
+        <span class="badge-status badge-active mb-3 d-inline-block">Vigente</span>
+        <h6>Plan familiar OndaPlay</h6>
+        <p class="text-dim small">Hasta 4 perfiles con el plan Premium al mismo precio.</p>
+        <p class="text-faint small mb-0">Sin fecha de vencimiento</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="op-card p-4 h-100">
+        <span class="badge-status badge-pending mb-3 d-inline-block">Próximamente</span>
+        <h6>Estudiantes UTP -15%</h6>
+        <p class="text-dim small">Descuento verificando correo institucional.</p>
+        <p class="text-faint small mb-0">Disponible: 01/11/2026</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="op-footer">
+  <div class="container d-flex flex-wrap justify-content-between gap-3">
+    <div>© 2026 OndaPlay — Proyecto académico, Marco de Desarrollo Web, UTP.</div>
+    <div class="d-flex gap-3">
+      <a href="main.html" class="text-dim">Inicio</a>
+      <a href="contacto.html" class="text-dim">Contacto</a>
+      <a href="login.html" class="text-dim">Iniciar sesión</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

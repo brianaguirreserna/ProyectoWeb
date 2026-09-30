@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contacto — OndaPlay</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg op-navbar py-3">
+  <div class="container">
+    <a class="navbar-brand" href="main.html">Onda<span class="dot">Play</span></a>
+    <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+      <i class="bi bi-list fs-2"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navMain">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link" href="main.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="publicidad.html">Promociones</a></li>
+        <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link" href="gestion.html">Panel administrativo</a></li>
+      </ul>
+      <a href="login.html" class="btn btn-accent px-4">Iniciar sesión</a>
+    </div>
+  </div>
+</nav>
+
+<header class="py-5" style="border-bottom:1px solid var(--line);">
+  <div class="container py-3">
+    <h1 class="h2">Hablemos</h1>
+    <p class="text-dim">Soporte de cuenta, facturación y alianzas comerciales.</p>
+  </div>
+</header>
+
+<section class="container py-5">
+  <div class="row g-5">
+    <div class="col-lg-5">
+      <div class="op-card p-4 mb-3">
+        <div class="d-flex gap-3">
+          <i class="bi bi-envelope fs-4" style="color:var(--accent-hi);"></i>
+          <div>
+            <h6 class="mb-1">Correo de soporte</h6>
+            <p class="text-dim small mb-0">soporte@ondaplay.pe</p>
+          </div>
+        </div>
+      </div>
+      <div class="op-card p-4 mb-3">
+        <div class="d-flex gap-3">
+          <i class="bi bi-telephone fs-4" style="color:var(--accent-hi);"></i>
+          <div>
+            <h6 class="mb-1">Línea de atención</h6>
+            <p class="text-dim small mb-0">(01) 555-0134 · Lun a Sáb, 9:00–20:00</p>
+          </div>
+        </div>
+      </div>
+      <div class="op-card p-4">
+        <div class="d-flex gap-3">
+          <i class="bi bi-geo-alt fs-4" style="color:var(--accent-hi);"></i>
+          <div>
+            <h6 class="mb-1">Oficina central</h6>
+            <p class="text-dim small mb-0">Av. Javier Prado 1450, San Isidro, Lima, Perú</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--mensageform-->>
+    <div class="col-lg-7">
+      <div class="op-card p-4 p-md-5">
+        <h5 class="mb-4">Envíanos un mensaje</h5>
+        <form onsubmit="return false;">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Nombre completo</label>
+              <input type="text" class="form-control" placeholder="Nombre y apellido">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Correo electrónico</label>
+              <input type="email" class="form-control" placeholder="tunombre@correo.com">
+            </div>
+            <div class="col-12">
+              <label class="form-label">Motivo</label>
+              <select class="form-select">
+                <option>Consulta de facturación</option>
+                <option>Problema técnico</option>
+                <option>Alianza comercial / publicidad</option>
+                <option>Otro</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <label class="form-label">Mensaje</label>
+              <textarea class="form-control" rows="4" placeholder="Cuéntanos en qué te ayudamos"></textarea>
+            </div>
+          </div>
+          <button class="btn btn-accent px-4 mt-4" type="submit">Enviar mensaje</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="op-footer">
+  <div class="container d-flex flex-wrap justify-content-between gap-3">
+    <div>© 2026 OndaPlay — Proyecto académico, Marco de Desarrollo Web, UTP.</div>
+    <div class="d-flex gap-3">
+      <a href="main.html" class="text-dim">Inicio</a>
+      <a href="publicidad.html" class="text-dim">Promociones</a>
+      <a href="login.html" class="text-dim">Iniciar sesión</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

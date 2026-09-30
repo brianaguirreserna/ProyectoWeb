@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Iniciar sesión — OndaPlay</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="d-flex align-items-center" style="min-height:100vh; background:
+  radial-gradient(ellipse at 15% 10%, rgba(91,108,255,.16), transparent 50%),
+  radial-gradient(ellipse at 85% 90%, rgba(255,62,127,.12), transparent 50%), var(--bg);">
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-11 col-sm-8 col-md-5 col-lg-4">
+      <div class="text-center mb-4">
+        <a href="main.html" class="navbar-brand fs-3">Onda<span class="dot" style="color:var(--accent-2);">Play</span></a>
+        <p class="text-dim small mt-1">Accede con tu cuenta para gestionar tu suscripción</p>
+      </div>
+      <div class="op-card p-4 p-md-5">
+        <ul class="nav nav-pills mb-4 justify-content-center" role="tablist">
+          <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#tabCliente" type="button">Cliente</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#tabAdmin" type="button">Administrador</button></li>
+        </ul>
+        <div class="tab-content">
+          <!--usertab-->
+          <div class="tab-pane fade show active" id="tabCliente">
+            <form action="main.html" onsubmit="return true;">
+              <div class="mb-3">
+                <label class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" placeholder="tunombre@correo.com" required>
+              </div>
+              <div class="mb-2">
+                <label class="form-label">Contraseña</label>
+                <input type="password" class="form-control" placeholder="••••••••" required>
+              </div>
+              <div class="d-flex justify-content-between align-items-center mb-4">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="remember">
+                  <label class="form-check-label text-dim small" for="remember">Recordarme</label>
+                </div>
+                <a href="#" class="small text-dim">¿Olvidaste tu contraseña?</a>
+              </div>
+              <button class="btn btn-accent w-100 py-2" type="submit">Ingresar</button>
+              <p class="text-faint small text-center mt-3 mb-0">Autenticación simulada con Spring Security + JWT.</p>
+            </form>
+          </div>
+          <!--admitab-->>
+          <div class="tab-pane fade" id="tabAdmin">
+            <form action="gestion.html" onsubmit="return true;">
+              <div class="mb-3">
+                <label class="form-label">Usuario administrador</label>
+                <input type="text" class="form-control" placeholder="admin.ondaplay" required>
+              </div>
+              <div class="mb-4">
+                <label class="form-label">Contraseña</label>
+                <input type="password" class="form-control" placeholder="••••••••" required>
+              </div>
+              <button class="btn btn-accent w-100 py-2" type="submit">Ingresar al panel</button>
+              <p class="text-faint small text-center mt-3 mb-0">Rol con permisos sobre planes, catálogo, usuarios y métricas.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+      <p class="text-center text-dim small mt-4">
+        ¿No tienes cuenta? <a href="main.html">Vuelve al inicio y elige un plan</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

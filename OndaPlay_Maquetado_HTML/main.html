@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OndaPlay — La pagina que no pidiste</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg op-navbar fixed-top py-3">
+  <div class="container">
+    <a class="navbar-brand" href="main.html">Onda<span class="dot">Play</span></a>
+    <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+      <i class="bi bi-list fs-2"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navMain">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link active" href="main.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="publicidad.html">Promociones</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link" href="gestion.html">Panel administrativo</a></li>
+      </ul>
+      <a href="login.html" class="btn btn-accent px-4">Iniciar sesión</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <span class="badge rounded-pill text-bg-dark border border-secondary-subtle mb-3">Nuevo · Planes familiares</span>
+        <h1>Una suscripción para todo tu entretenimiento.</h1>
+        <p class="lead mt-3">Series, películas y eventos en vivo con pagos automáticos, seguros y sin sorpresas en tu recibo. Cancela cuando quieras.</p>
+        <div class="d-flex gap-3 mt-4">
+          <a href="login.html" class="btn btn-accent btn-lg px-4">Comenzar ahora</a>
+          <a href="#planes" class="btn btn-outline-op btn-lg px-4">Ver planes</a>
+        </div>
+        <p class="text-faint mt-3 small">Desde S/ 19.90 al mes, Cancelalo cuando quieras</p>
+      </div>
+      <div class="col-lg-6">
+        <div class="row g-2">
+          <div class="col-4"><div class="content-tile"><span class="badge-cat">Serie</span>Lo q callan los Utepinos</div></div>
+          <div class="col-4"><div class="content-tile"><span class="badge-cat">Película</span>Titanic</div></div>
+          <div class="col-4"><div class="content-tile"><span class="badge-cat">Documental</span>Discovery chanel</div></div>
+          <div class="col-4"><div class="content-tile"><span class="badge-cat">Serie</span>IVU</div></div>
+          <div class="col-4"><div class="content-tile"><span class="badge-cat">Evento</span>Live: Velada del año</div></div>
+          <div class="col-4"><div class="content-tile"><span class="badge-cat">Película</span>Avengers: Doomsday</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!--CATALOGO-->
+<section class="py-5" id="catalogo">
+  <div class="container py-4">
+    <div class="d-flex justify-content-between align-items-end mb-4">
+      <div>
+        <h2 class="h3 mb-1">Catálogo destacado</h2>
+        <p class="text-dim mb-0">Contenido organizado por categoría, disponible según tu plan.</p>
+      </div>
+    </div>
+    <div class="row g-3">
+      <div class="col-6 col-md-3"><div class="content-tile" style="aspect-ratio:16/10;"><span class="badge-cat">Serie</span>Lo que callan los Utepinos</div></div>
+      <div class="col-6 col-md-3"><div class="content-tile" style="aspect-ratio:16/10;"><span class="badge-cat">Película</span>Titanic</div></div>
+      <div class="col-6 col-md-3"><div class="content-tile" style="aspect-ratio:16/10;"><span class="badge-cat">Infantil</span>Tooncast</div></div>
+      <div class="col-6 col-md-3"><div class="content-tile" style="aspect-ratio:16/10;"><span class="badge-cat">Deporte en vivo</span>Liga1</div></div>
+    </div>
+  </div>
+</section>
+<!--Planes-->
+<section class="py-5 border-top border-bottom" style="border-color:var(--line) !important;" id="planes">
+  <div class="container py-4">
+    <div class="text-center mb-5">
+      <h2 class="h3">Elige tu plan</h2>
+      <p class="text-dim">Todos los planes incluyen catálogo completo y hasta 2 dispositivos simultáneos en Estándar y Premium.</p>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-4">
+        <div class="plan-card h-100">
+          <h5 class="text-dim fw-semibold">Básico</h5>
+          <div class="plan-price mt-2">S/ 19.90 <span>/ mes</span></div>
+          <ul class="list-unstyled mt-4 text-dim small">
+            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>1 pantalla a la vez</li>
+            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>Calidad HD</li>
+            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>Catálogo completo</li>
+          </ul>
+          <a href="login.html" class="btn btn-outline-op w-100 mt-3">Elegir Básico</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="plan-card featured h-100">
+          <h5 class="text-dim fw-semibold">Estándar</h5>
+          <div class="plan-price mt-2">S/ 29.90 <span>/ mes</span></div>
+          <ul class="list-unstyled mt-4 text-dim small">
+            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>2 pantallas simultáneas</li>
+            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>Calidad Full HD</li>
+            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>Descargas offline</li>
+          </ul>
+          <a href="login.html" class="btn btn-accent w-100 mt-3">Elegir Estándar</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="plan-card h-100">
+          <h5 class="text-dim fw-semibold">Premium</h5>
+          <div class="plan-price mt-2">S/ 39.90 <span>/ mes</span></div>
+          <ul class="list-unstyled mt-4 text-dim small">
+            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>4 pantallas simultáneas</li>
+            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>Calidad 4K + HDR</li>
+            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>Eventos en vivo incluidos</li>
+          </ul>
+          <a href="login.html" class="btn btn-outline-op w-100 mt-3">Elegir Premium</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="op-footer">
+  <div class="container d-flex flex-wrap justify-content-between gap-3">
+    <div>© 2026 OndaPlay — Proyecto académico, Marco de Desarrollo Web, UTP.</div>
+    <div class="d-flex gap-3">
+      <a href="contacto.html" class="text-dim">Contacto</a>
+      <a href="publicidad.html" class="text-dim">Promociones</a>
+      <a href="login.html" class="text-dim">Iniciar sesión</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
