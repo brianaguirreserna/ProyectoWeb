@@ -1,9 +1,3 @@
-/* =========================================================
-   OndaPlay — script.js
-   Lógica compartida de navegación, sidebar y CRUD simulado
-   (sin backend: todo ocurre en el DOM, es un maquetado)
-   ========================================================= */
-
 document.addEventListener("DOMContentLoaded", () => {
   initSidebarToggle();
   initCrudModals();
@@ -11,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initToast();
 });
 
-/* ---------- Sidebar (móvil) ---------- */
+/*Sidebar (móvil)*/
 function initSidebarToggle() {
   const btn = document.querySelector("[data-sidebar-toggle]");
   const sidebar = document.querySelector(".admin-sidebar");
@@ -25,11 +19,7 @@ function initSidebarToggle() {
   });
 }
 
-/* ---------- Modales de alta / edición ----------
-   Botones con [data-edit-row] abren el modal y precargan
-   los campos del formulario a partir de data-attributes
-   de la fila (simulación de "Editar"). Botones con
-   [data-new-record] abren el modal en blanco ("Nuevo"). */
+/* Modals*/
 function initCrudModals() {
   document.querySelectorAll("[data-new-record]").forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -71,7 +61,7 @@ function initCrudModals() {
   });
 }
 
-/* ---------- Eliminar fila (simulado) ---------- */
+/*Eliminar fila (simulacion)*/
 function initDeleteButtons() {
   document.querySelectorAll("[data-delete-row]").forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -87,7 +77,7 @@ function initDeleteButtons() {
   });
 }
 
-/* ---------- Toast ---------- */
+/*Toast*/
 function initToast() {
   if (document.getElementById("opToast")) return;
   const wrap = document.createElement("div");
